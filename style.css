@@ -37,7 +37,7 @@ body{
     min-width: 230;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     flex-direction: column;
     align-content: center;
