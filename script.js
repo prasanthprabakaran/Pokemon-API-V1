@@ -32,10 +32,15 @@ const fetchPokemonApi = async () => {
 
 // Fetching pokemon api using await/async method
 const fetchPokemon = async (id)=>{
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const response = await fetch(url);
-    const pokemon = await response.json();
-    createPokemonCards(pokemon);
+    try {
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+        const response = await fetch(url);
+        const pokemon = await response.json();
+        createPokemonCards(pokemon);
+    } catch (error) {
+        console.error(error);
+    }
+    
 };
 
 // Creating pokemons using the fetched data + counts.
